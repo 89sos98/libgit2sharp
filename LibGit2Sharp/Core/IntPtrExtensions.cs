@@ -5,9 +5,9 @@ namespace LibGit2Sharp.Core
 {
     internal static class IntPtrExtensions
     {
-        public static T MarshalAs<T>(this IntPtr ptr)
+        public static T MarshalAs<T>(this IntPtr ptr, bool throwWhenNull = true)
         {
-            if (ptr == IntPtr.Zero)
+            if (!throwWhenNull && ptr == IntPtr.Zero)
             {
                 return default(T);
             }

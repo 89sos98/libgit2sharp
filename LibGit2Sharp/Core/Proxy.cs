@@ -732,7 +732,7 @@ namespace LibGit2Sharp.Core
 
         public static GitDiffDelta git_diff_get_delta(DiffSafeHandle diff, int idx)
         {
-            return NativeMethods.git_diff_get_delta(diff, (UIntPtr) idx).MarshalAs<GitDiffDelta>();
+            return NativeMethods.git_diff_get_delta(diff, (UIntPtr) idx).MarshalAs<GitDiffDelta>(false);
         }
 
         #endregion
