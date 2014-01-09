@@ -52,7 +52,7 @@ namespace LibGit2Sharp.Core
 
         public static GitBlameHunk git_blame_get_hunk_byindex(BlameSafeHandle blame, uint idx)
         {
-            return NativeMethods.git_blame_get_hunk_byindex(blame, idx).MarshalAs<GitBlameHunk>();
+            return NativeMethods.git_blame_get_hunk_byindex(blame, idx).MarshalAs<GitBlameHunk>(false);
         }
 
         public static void git_blame_free(IntPtr blame)
